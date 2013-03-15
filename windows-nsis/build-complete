@@ -18,7 +18,7 @@ main() {
 		IMAGEROOT="$(pwd)/${TMPDIR}/image-${arch}" \
 			SOURCESROOT="$(pwd)/sources" \
 			BUILDROOT="${TMPDIR}/build-${arch}" \
-			CHOST=${arch}-w64-mingw32 \
+			CHOST=${arch}-pc-mingw32 \
 			../generic/build \
 				--special-build="${SPECIAL_BUILD}" \
 				|| die "build ${arch}"
