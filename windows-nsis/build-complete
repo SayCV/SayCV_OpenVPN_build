@@ -9,8 +9,8 @@ die() {
 main() {
 	rm -fr "${TMPDIR}"
 
-	"${WGET}" ${WGET_OPTS} --directory-prefix=${TMPDIR} "${EASY_RSA_URL}" || die "get easy-rsa"
-	"${WGET}" ${WGET_OPTS} --directory-prefix=${TMPDIR} "${TAP_WINDOWS_INSTALLER_URL}" || die "get tap-windows"
+	"${WGET}" ${WGET_OPTS_PROXY} --directory-prefix=${TMPDIR} "${EASY_RSA_URL}" || die "get easy-rsa"
+	"${WGET}" ${WGET_OPTS_PROXY} --directory-prefix=${TMPDIR} "${TAP_WINDOWS_INSTALLER_URL}" || die "get tap-windows"
 
 	for arch in i686 x86_64; do
 		echo "BUILDING ${arch}"
